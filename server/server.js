@@ -14,6 +14,14 @@ const upload = multer({ dest: 'uploads/' });
 // Enable CORS for all origins
 app.use(cors());
 
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, '../client/build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+});
+
 // Serve static files (converted WebP images)
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
