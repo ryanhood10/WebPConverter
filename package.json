@@ -1,5 +1,5 @@
 {
-    "name": "webp-converter-one",
+    "name": "webp-converter",
     "version": "1.0.0",
     "engines": {
       "node": "14.x"
@@ -12,9 +12,6 @@
       "express": "^4.17.1",
       "path": "^0.12.7"
     },
-    "devDependencies": {},
-    "engines": {
-      "node": ">=14.0.0"
-    }
+    "devDependencies": {}
   }
   
